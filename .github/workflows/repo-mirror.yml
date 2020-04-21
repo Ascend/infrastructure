@@ -25,3 +25,4 @@ jobs:
         dst_token:  ${{ secrets.SYNC_ASCEND_TOKEN }}
         account_type: org
         clone_style: ssh
+        force_update: true
