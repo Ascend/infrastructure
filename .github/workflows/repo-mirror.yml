@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror periodic job
+name: Manual Ascend Gitee repos mirror periodic job
 
 on:
   pull_request:
