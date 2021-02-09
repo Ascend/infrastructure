@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Mirror the gitee/ascend org repos to github/ascend.
-      uses: Yikun/hub-mirror-action@master
+      uses: Yikun/hub-mirror-action@lowercase
       with:
         src: gitee/ascend
         dst: github/Ascend
