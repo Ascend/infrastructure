@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror periodic job
+name: Ascend Gitee repos mirror daily job
 
 on:
   pull_request:
@@ -27,3 +27,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
+        black_list: "samples, modelzoo"
