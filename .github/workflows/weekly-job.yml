@@ -1,0 +1,30 @@
+name: Ascend Gitee repos mirror weekly job
+
+on:
+  pull_request:
+    paths:
+    - '.github/workflows/**'
+    # Runs at every pull requests submitted in master branch 
+    branches: [ master ]
+  schedule:
+    # Runs at At 01:00 (9:00 AM Beijing) on every Monday.
+    - cron:  '0 1 * * 1'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mirror the gitee/ascend org repos to github/ascend.
+      uses: Yikun/hub-mirror-action@v1.0
+      with:
+        src: gitee/ascend
+        dst: github/Ascend
+        dst_key: ${{ secrets.SYNC_ASCEND_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_ASCEND_TOKEN }}
+        account_type: org
+        clone_style: ssh
+        force_update: true
+        debug: true
+        white_list: "samples, modelzoo"
