@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror periodic job
+name: Ascend Gitee repos mirror daily job
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Mirror the gitee/ascend org repos to github/ascend.
-      uses: Yikun/hub-mirror-action@v1.0
+      uses: Yikun/hub-mirror-action@v1.1
       with:
         src: gitee/ascend
         dst: github/Ascend
@@ -27,3 +27,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
+        black_list: "samples, modelzoo"
