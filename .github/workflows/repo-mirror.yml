@@ -27,4 +27,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
-        black_list: "samples, modelzoo"
+        black_list: "samples, modelzoo, tools"
