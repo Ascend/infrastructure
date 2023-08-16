@@ -1,0 +1,30 @@
+name: Ascend Gitee repos mirror 2 hours job
+
+on:
+  pull_request:
+    paths:
+    - '.github/workflows/**'
+    # Runs at every pull requests submitted in master branch 
+    branches: [ master ]
+  schedule:
+    # Runs at 01:00 UTC (9:00 AM Beijing) every day
+    - cron:  '0 */2 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mirror the gitee/ascend org repos to github/ascend.
+      uses: Yikun/hub-mirror-action@v1.3
+      with:
+        src: gitee/ascend
+        dst: github/Ascend
+        dst_key: ${{ secrets.SYNC_ASCEND_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_ASCEND_TOKEN }}
+        account_type: org
+        clone_style: ssh
+        force_update: true
+        debug: true
+        static_list: "pytorch"
