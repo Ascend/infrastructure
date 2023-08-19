@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror daily job
+name: Ascend Gitee repos mirror daily job test
 
 on:
   pull_request:
