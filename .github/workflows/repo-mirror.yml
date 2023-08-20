@@ -27,4 +27,5 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
+        static_list: "pytorch"
         black_list: "samples, modelzoo, tools"
