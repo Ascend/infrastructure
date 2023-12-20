@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror 2 hours job
+name: Ascend Gitee repos mirror 2 hours job test
 
 on:
   pull_request:
