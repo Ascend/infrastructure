@@ -27,4 +27,4 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
-        static_list: "pytorch, op-plugin, torchair, vision, MindSpeed, MindSpeed-RL, MindSpeed-LLM, MindSpeed-MM, MindSpeed-Core-MS"
+        static_list: "pytorch, op-plugin, torchair, vision, MindSpeed, MindSpeed-RL, MindSpeed-LLM, MindSpeed-MM, MindSpeed-Core-MS, triton-ascend"
