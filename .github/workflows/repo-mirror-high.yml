@@ -16,15 +16,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Mirror the gitee/ascend org repos to github/ascend.
-      uses: Yikun/hub-mirror-action@v1.4
+    - name: Mirror the gitcode/ascend org repos to github/ascend.
+      uses: Yikun/hub-mirror-action@master
       with:
-        src: gitee/ascend
+        src: gitcode/ascend
         dst: github/Ascend
-        dst_key: ${{ secrets.SYNC_ASCEND_PRIVATE_KEY }}
-        dst_token:  ${{ secrets.SYNC_ASCEND_TOKEN }}
+        dst_key: ${{ secrets.SYNC_SSH_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_TOKEN_GITHUB }}
         account_type: org
         clone_style: ssh
         force_update: true
         debug: true
         static_list: "pytorch, op-plugin, torchair, vision, MindSpeed, MindSpeed-RL, MindSpeed-LLM, MindSpeed-MM, MindSpeed-Core-MS, triton-ascend"
+        lfs: true
