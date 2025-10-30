@@ -12,9 +12,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Mirror the gitcode/ascend org repos to github/ascend.
       uses: Yikun/hub-mirror-action@master
