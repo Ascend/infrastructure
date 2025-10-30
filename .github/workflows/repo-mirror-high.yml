@@ -1,4 +1,4 @@
-name: Ascend Gitee repos mirror 2 hours job
+name: Ascend GitCode repos mirror 2 hours job
 
 on:
   pull_request:
