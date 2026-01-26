@@ -25,5 +25,29 @@ jobs:
         clone_style: ssh
         force_update: true
         debug: true
-        static_list: "pytorch, op-plugin, torchair, vision, MindSpeed, MindSpeed-RL, MindSpeed-LLM, MindSpeed-MM, MindSpeed-Core-MS, triton-ascend, AscendNPU-IR"
+        static_list: |
+          pytorch,
+          op-plugin,
+          torchair,
+          vision,
+          MindSpeed,
+          MindSpeed-RL,
+          MindSpeed-LLM,
+          MindSpeed-MM,
+          MindSpeed-Core-MS,
+          triton-ascend,
+          AscendNPU-IR,
+          ascend-deployer,
+          mind-cluster,
+          mindcluster-deploy
+          RecSDK,
+          VisionSDK,
+          RAGSDK,
+          IndexSDK,
+          MultimodalSDK,
+          AgentSDK,
+          MindInferenceSDK,
+          mindsdk-referenceapps,
+          MEF,
+          OMSDK,
         lfs: true
